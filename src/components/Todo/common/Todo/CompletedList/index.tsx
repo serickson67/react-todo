@@ -1,16 +1,16 @@
-import React, { FC } from "react";
-import { Checkbox, Container, Typography, makeStyles } from "@material-ui/core";
-import { TodoItem } from "../../types";
+import React, { FC } from 'react';
+import { Checkbox, Container, Typography, makeStyles } from '@material-ui/core';
+import { TodoItem } from '../../types';
 
 const useStyles = makeStyles({
   root: {
-    display: "flex",
-    width: "100%",
+    display: 'flex',
+    width: '100%',
   },
   subtitle1: {
-    textDecorationLine: "line-through",
-    textDecorationStyle: "solid",
-    padding: "10px 0px 7px",
+    textDecorationLine: 'line-through',
+    textDecorationStyle: 'solid',
+    padding: '10px 0px 7px',
   },
 });
 
@@ -37,7 +37,7 @@ export const TodoCompletedItem: FC<Props> = ({
             setItemsCallback([...items]);
           }}
         />
-        <Typography variant="subtitle1" className={classes.subtitle1}>
+        <Typography variant='subtitle1' className={classes.subtitle1}>
           {items[itemIndex].name}
         </Typography>
       </Container>

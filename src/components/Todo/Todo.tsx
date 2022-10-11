@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {
   Container,
   makeStyles,
@@ -8,27 +8,27 @@ import {
   AccordionDetails,
   AccordionSummary,
   Typography,
-} from "@material-ui/core";
-import { Reorder } from "framer-motion";
-import { Item, TodoCompletedItem } from "./common";
-import { Form } from "./common/Todo/Form";
-import { TodoItem } from "./common/types";
+} from '@material-ui/core';
+import { Reorder } from 'framer-motion';
+import { Item, TodoCompletedItem } from './common';
+import { Form } from './common/Todo/Form';
+import { TodoItem } from './common/types';
 
 const useStyles = makeStyles({
   accordion: {
-    boxShadow: "none",
-    borderTop: "1px solid black",
-    marginTop: "20px",
+    boxShadow: 'none',
+    borderTop: '1px solid black',
+    marginTop: '20px',
   },
   accordionDetails: {
-    display: "block",
-    paddingLeft: "0px",
+    display: 'block',
+    paddingLeft: '0px',
   },
   accordionSummary: {
-    paddingLeft: "4.2%",
+    paddingLeft: '4.2%',
   },
   reorderItem: {
-    listStyle: "none",
+    listStyle: 'none',
   },
 });
 
@@ -79,7 +79,7 @@ function TodoApp(props: TodoAppProps) {
     <Container>
       <Form addItem={addItem} />
       <Reorder.Group
-        axis="y"
+        axis='y'
         values={items.map((item) => item.uuid)}
         onReorder={handleReorderTodoItems}
       >
@@ -100,8 +100,8 @@ function TodoApp(props: TodoAppProps) {
           <AccordionSummary
             className={classes.accordionSummary}
             expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
+            aria-controls='panel1a-content'
+            id='panel1a-header'
           >
             <Typography> {completedItemsLength} Completed items </Typography>
           </AccordionSummary>
